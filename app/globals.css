@@ -14,8 +14,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #080303;
+    /* --foreground: #ededed; */
   }
 }
 
@@ -23,4 +23,10 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Remove Bootstrap's default arrow from button.form-select */
+button.form-select {
+  background-image: none !important;
+  padding-right: 1rem;
 }

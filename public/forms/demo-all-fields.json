@@ -1,0 +1,90 @@
+{
+  "title": "Demo All Fields",
+  "path": "/demo/inline",
+  "layout": "horizontal",
+  "className": "container py-4",
+  "tabs": [
+    {
+      "name": "Basic Info",
+      "fields": [
+        {
+          "name": "fullName",
+          "label": "Full Name",
+          "type": "text",
+          "col": 6,
+          "placeholder": "John Doe",
+          "validation": { "required": true, "message": "Name is required" }
+        },
+        {
+          "name": "email",
+          "label": "Email",
+          "type": "email",
+          "col": 6,
+          "placeholder": "you@xyz.com",
+          "validation": { 
+            "required": true, 
+            "pattern": "^[\\w.+-]+@xyz\\..+$",
+            "message": "Must end with @xyz domain"
+          }
+        },
+        {
+          "name": "age",
+          "label": "Age",
+          "type": "number",
+          "col": 6,
+          "slider": true,
+          "min": 18,
+          "max": 65,
+          "validation": { 
+            "required": true, 
+            "min": 18, 
+            "max": 65,
+            "message": "Age must be between 18 and 65"
+          }
+        },
+        {
+          "name": "gender",
+          "label": "Gender",
+          "type": "dropdown",
+          "col": 6,
+          "placeholder": "Select Gender",
+          "fetchRemote": true,
+          "optionUrl": "/data/gender.json"
+        }
+      ]
+    },
+    {
+      "name": "Preferences",
+      "fields": [
+        {
+          "name": "role",
+          "label": "Role",
+          "type": "radio",
+          "col": 12,
+          "options": [
+            { "value": "admin", "label": "Administrator" },
+            { "value": "user", "label": "Standard User" }
+          ]
+        },
+        {
+          "name": "skills",
+          "label": "Skills",
+          "type": "checkbox",
+          "col": 12,
+          "options": [
+            { "value": "js", "label": "JavaScript" },
+            { "value": "py", "label": "Python" },
+            { "value": "go", "label": "Go" }
+          ]
+        },
+        {
+          "name": "bio",
+          "label": "Bio",
+          "type": "textarea",
+          "col": 12,
+          "placeholder": "Tell us about yourself..."
+        }
+      ]
+    }
+  ]
+}

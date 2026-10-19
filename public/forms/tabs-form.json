@@ -1,0 +1,129 @@
+{
+  "title": "User Profile Setup",
+  "layout": "horizont",
+  "className": "p-4 bg-white rounded shadow-sm",
+  "tabs": [
+    {
+      "name": "Personal Info",
+      "fields": [
+        {
+          "name": "firstName",
+          "label": "First Name",
+          "type": "text",
+          "col": 6,
+          "placeholder": "John",
+          "validation": {
+            "required": true,
+            "message": "First name is required"
+          }
+        },
+        {
+          "name": "lastName",
+          "label": "Last Name",
+          "type": "text",
+          "col": 6,
+          "placeholder": "Doe",
+          "validation": {
+            "required": true,
+            "message": "Last name is required"
+          }
+        },
+        {
+          "name": "email",
+          "label": "Email",
+          "type": "email",
+          "col": 12,
+          "placeholder": "you@xyz.com",
+          "validation": {
+            "required": true,
+            "pattern": "^[\\w.+-]+@xyz\\..+$",
+            "message": "Must end with @xyz domain"
+          }
+        },
+        {
+          "name": "age",
+          "label": "Age",
+          "type": "number",
+          "col": 12,
+          "slider": true,
+          "min": 18,
+          "max": 65,
+          "validation": {
+            "required": true,
+            "min": 18,
+            "max": 65,
+            "message": "Age must be between 18 and 65"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Preferences",
+      "fields": [
+        {
+          "name": "gender",
+          "label": "Gender",
+          "type": "dropdown",
+          "col": 6,
+          "fetchRemote": true,
+          "optionUrl": "/data/gender.json",
+          "validation": {
+            "required": true,
+            "message": "Please select a gender"
+          }
+        },
+        {
+          "name": "role",
+          "label": "Role",
+          "type": "radio",
+          "col": 6,
+          "options": [
+            { "value": "admin", "label": "Administrator" },
+            { "value": "user", "label": "Standard User" }
+          ],
+          "validation": {
+            "required": true,
+            "message": "Please select a role"
+          }
+        },
+        {
+          "name": "skills",
+          "label": "Skills",
+          "type": "checkbox",
+          "col": 12,
+          "options": [
+            { "value": "js", "label": "JavaScript" },
+            { "value": "py", "label": "Python" },
+            { "value": "go", "label": "Go" }
+          ],
+          "validation": {
+            "required": true,
+            "message": "Select at least one skill"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Additional Details",
+      "fields": [
+        {
+          "name": "bio",
+          "label": "Bio",
+          "type": "textarea",
+          "col": 12,
+          "placeholder": "Tell us about yourself...",
+          "validation": {
+            "required": true,
+            "message": "Bio cannot be empty"
+          }
+        },
+        {
+          "name": "resume",
+          "label": "Upload Resume",
+          "type": "file",
+          "col": 12
+        }
+      ]
+    }
+  ]
+}

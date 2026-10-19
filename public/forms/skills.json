@@ -1,0 +1,101 @@
+{
+  "title": "Employee Onboarding Form",
+  "layout": "vertical",
+  "fields": [
+    {
+      "name": "firstName",
+      "label": "First Name",
+      "type": "text",
+      "col": 6,
+      "placeholder": "Enter first name",
+      "description": "Legal first name as per government ID.",
+      "validation": {
+        "required": true,
+        "message": "First name is required."
+      }
+    },
+    {
+      "name": "lastName",
+      "label": "Last Name",
+      "type": "text",
+      "col": 6,
+      "placeholder": "Enter last name",
+      "validation": {
+        "required": true,
+        "message": "Last name is required."
+      }
+    },
+    {
+      "name": "email",
+      "label": "Work Email",
+      "type": "email",
+      "col": 12,
+      "placeholder": "name@company.com",
+      "validation": {
+        "required": true,
+        "pattern": "^[\\w.+-]+@company\\..+$",
+        "message": "Must be a valid company email ending with @company.com"
+      }
+    },
+    {
+      "name": "department",
+      "label": "Department",
+      "type": "select",
+      "col": 6,
+      "placeholder": "Select department...",
+      "options": [
+        { "label": "Engineering", "value": "engineering" },
+        { "label": "Product Design", "value": "design" },
+        { "label": "Marketing & Growth", "value": "marketing" },
+        { "label": "Human Resources", "value": "hr" }
+      ],
+      "validation": {
+        "required": true,
+        "message": "Please select a department."
+      }
+    },
+    {
+      "name": "startDate",
+      "label": "Start Date",
+      "type": "date",
+      "col": 6,
+      "validation": {
+        "required": true,
+        "message": "Start date is mandatory."
+      }
+    },
+    {
+      "name": "salary",
+      "label": "Base Salary ($)",
+      "type": "number",
+      "col": 6,
+      "placeholder": "50000",
+      "validation": {
+        "required": true,
+        "min": 30000,
+        "max": 250000,
+        "message": "Salary must be between $30,000 and $250,000."
+      }
+    },
+    {
+      "name": "skills",
+      "label": "Primary Tech Stack / Skills",
+      "type": "checkbox",
+      "col": 12,
+      "options": [
+        { "label": "React / Next.js", "value": "react" },
+        { "label": "TypeScript", "value": "ts" },
+        { "label": "Node.js", "value": "node" },
+        { "label": "Python", "value": "python" }
+      ]
+    },
+    {
+      "name": "bio",
+      "label": "Professional Summary",
+      "type": "textarea",
+      "col": 12,
+      "rows": 3,
+      "placeholder": "Briefly describe your background..."
+    }
+  ]
+}
