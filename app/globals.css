@@ -17,8 +17,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0f0f1e;
-    --foreground: #e0e0e0;
+    /* --background: #0f0f1e; */
+    /* --foreground: #e0e0e0; */
   }
 }
 
@@ -43,7 +43,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
+    /* background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%); */
   }
 }
 
@@ -240,6 +240,6 @@ button, a, input, select, textarea {
 @media print {
   body {
     background: white;
-    color: black;
+    /* color: black; */
   }
 }
