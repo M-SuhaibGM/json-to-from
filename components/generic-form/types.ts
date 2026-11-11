@@ -16,10 +16,10 @@ export interface FieldOption {
 }
 
 export interface FormField {
-  description: import("react").JSX.Element;
-  hidden: any;
-  maxLength: number | undefined;
-  readOnly: boolean | undefined;
+  description?: import("react").JSX.Element;
+  hidden?: any;
+  maxLength?: number;
+  readOnly?: boolean;
   name: string;
   label?: string;
   type: FieldType;
